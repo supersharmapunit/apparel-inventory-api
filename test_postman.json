@@ -1,0 +1,192 @@
+{
+	"info": {
+		"_postman_id": "your-postman-id",
+		"name": "Apparel Inventory API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Update Stock",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"code\": \"A001\",\n    \"size\": \"M\",\n    \"quantity\": 10,\n    \"price\": 19.99\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/update-stock",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"update-stock"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Multiple Stocks",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"code\": \"A002\",\n        \"size\": \"L\",\n        \"quantity\": 5,\n        \"price\": 24.99\n    },\n    {\n        \"code\": \"A003\",\n        \"size\": \"S\",\n        \"quantity\": 15,\n        \"price\": 14.99\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/update-multiple-stocks",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"update-multiple-stocks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check Order Fulfillment (Fulfillable)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"items\": [\n        {\n            \"code\": \"A001\",\n            \"size\": \"M\",\n            \"quantity\": 2\n        },\n        {\n            \"code\": \"A002\",\n            \"size\": \"L\",\n            \"quantity\": 1\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/check-order-fulfillment",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"check-order-fulfillment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check Order Fulfillment (Unfulfillable)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"items\": [\n        {\n            \"code\": \"A001\",\n            \"size\": \"M\",\n            \"quantity\": 20\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/check-order-fulfillment",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"check-order-fulfillment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Lowest Cost (Fulfillable)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"items\": [\n        {\n            \"code\": \"A001\",\n            \"size\": \"M\",\n            \"quantity\": 2\n        },\n        {\n            \"code\": \"A002\",\n            \"size\": \"L\",\n            \"quantity\": 1\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/get-lowest-cost",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"get-lowest-cost"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Lowest Cost (Unfulfillable)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"items\": [\n        {\n            \"code\": \"A003\",\n            \"size\": \"S\",\n            \"quantity\": 20\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/get-lowest-cost",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"get-lowest-cost"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:3000/api",
+			"type": "string"
+		}
+	]
+}

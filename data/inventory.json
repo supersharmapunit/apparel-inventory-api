@@ -1,0 +1,47 @@
+[
+  {
+    "code": "A001",
+    "sizes": {
+      "M": {
+        "quantity": 10,
+        "price": 20
+      }
+    }
+  },
+  {
+    "code": "A002",
+    "sizes": {
+      "L": {
+        "quantity": 5,
+        "price": 25
+      }
+    }
+  },
+  {
+    "code": "A003",
+    "sizes": {
+      "S": {
+        "quantity": 15,
+        "price": 18
+      }
+    }
+  },
+  {
+    "code": "A004",
+    "sizes": {
+      "M": {
+        "quantity": 20,
+        "price": 15
+      }
+    }
+  },
+  {
+    "code": "A005",
+    "sizes": {
+      "L": {
+        "quantity": 10,
+        "price": 25
+      }
+    }
+  }
+]
